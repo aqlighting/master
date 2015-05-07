@@ -1,0 +1,19 @@
+<li class="%%GLOBAL_AlternateClass%%" itemscope itemtype="http://schema.org/Product">
+    <div class="ProductImage QuickView" data-product="%%GLOBAL_ProductId%%">
+        %%GLOBAL_ProductThumb%%
+    </div>
+    <div class="ProductPriceRating" itemscope itemtype="http://schema.org/Review">
+        <em class='catalog-product-price'>%%GLOBAL_ProductPrice%%</em>
+        <span class="Rating Rating%%GLOBAL_ProductRating%%" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+            <img src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_ProductRating%%.gif" alt="Product Rating" /><br />
+            <meta itemprop="datePublished" content="%%GLOBAL_ReviewDate%%">
+            <meta itemprop="worstRating" content="1">
+            <span itemprop="ratingValue" style='display: none;'>%%GLOBAL_ProductRating%%</span>
+            <span itemprop="bestRating" style='display: none;'>5</span>
+        </span>
+    </div>
+    <div class="ProductDetails" data-product-id="%%GLOBAL_ProductId%%">
+        <a href="%%GLOBAL_ProductLink%%" class="%%GLOBAL_SearchTrackClass%%">%%GLOBAL_ProductName%%</a>
+    </div>
+</li>
+

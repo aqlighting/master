@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang='en'>
+%%Panel.HTMLHead%%
+<body>
+  <div id="Container">
+    %%Panel.Header%%
+
+    <section class='aql'>
+      <div class="section-default">
+        <div class="wrapper">
+          <div class="home-box-header">
+            <h2 class="h2-categories">Claim Form</h2>
+          </div>
+          <div class="account-details">
+            <div class="w-form">
+              <form action="http://www.affordablequalitylighting.com/pages.php?action=sendContactForm" method="post" id="ContactForm" name="email-form" data-name="Email Form">
+                <input type="hidden" name="page_id" id="page_id" value="89">
+                <label class="field-label" for="contact_email">Email Address</label>
+                <input class="w-input text-field-product large" id="contact_email" type="text" name="contact_email" data-name="Email Address" required="required">
+                <label class="field-label" for="contact_companyname">Company Name</label>
+                <input class="w-input text-field-product large" id="contact_companyname" type="text" name="contact_companyname" data-name="Company Name">
+                <label class="field-label" for="contact_phone">Phone Number</label>
+                <input class="w-input text-field-product large" id="contact_phone" type="text" name="contact_phone" data-name="Phone Number">
+                <label class="field-label" for="contact_orderno">Order Number</label>
+                <input class="w-input text-field-product large" id="contact_orderno" type="text" name="contact_orderno" data-name="Order Number">
+                <label class="field-label" for="contact_rma">Address</label>
+                <input class="w-input text-field-product large" id="contact_rma" type="text" name="contact_rma" data-name="Address">
+                <label class="field-label" for="contact_question">Details</label>
+                <textarea class="w-input text-field-product large" id="contact_question" name="contact_question" data-name="Details" required="required"></textarea>
+                <label class="field-label" for="captcha-check">Captcha Check</label>
+                <img class="captcha" src="http://www.affordablequalitylighting.com/captcha.php?4124" alt="img">
+                <div class="captcha-explanation">Please copy the characters from the image into the text field below.<br>Doing this helps us prevent automated submissions.</div>
+                <br>
+                <input class="w-input text-field-product" name="captcha" id="captcha" type="text" data-name="Captcha Check">
+
+                <div class="cart-total">
+                  <div class="action-bar">
+                    <input type="submit" value="Send Form" class="button btn1 margin-sides">
+                  </div>
+                </div>
+              </form>
+              <div class="w-form-done">
+                <p>Thank you! Your submission has been received!</p>
+              </div>
+              <div class="w-form-fail">
+                <p>Oops! Something went wrong while submitting the form :(</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      %%Panel.Footer%%
+    </section>
+    <script type="text/javascript">
+    //<![CDATA[
+      $('#ContactForm').submit(function() {
+        var email_address = $('#contact_email').val();
+
+        if(email_address.indexOf('@') == -1 || email_address.indexOf('.') == -1) {
+          alert('Please enter a valid email address, such as john@example.com.');
+          $('#contact_email').focus();
+          $('#contact_email').select();
+          return false;
+        }
+
+        if($('#contact_question').val() == '') {
+          alert('You forgot to enter your question/comment.');
+          $('#contact_question').focus();
+          return false;
+        }
+
+        if('' == '' && $('#captcha').val() == '') {
+          alert('Please copy the characters from the image into the \'Captcha Check\' text box.');
+          $('#captcha').focus();
+          return false;
+        }
+
+        return true;
+      });
+    //]]>
+    </script>
+  </div>
+</body>
+</html>

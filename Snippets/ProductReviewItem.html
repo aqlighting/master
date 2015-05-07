@@ -1,0 +1,15 @@
+    <li class="%%GLOBAL_AlternateReviewClass%%" itemscope itemtype="http://schema.org/Review">
+        <h4 class="ReviewTitle" itemprop="name">
+            %%GLOBAL_ReviewTitle%%
+            <img width="64" height="12" src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_ReviewRating%%.gif" alt="" />
+            <div class="Meta" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1">
+                <span itemprop="ratingValue">%%GLOBAL_ReviewRating%%</span> / <span itemprop="bestRating">5</span> stars
+            </div>
+        </h4>
+        <p class="Meta"><meta itemprop="datePublished" content="%%GLOBAL_ReviewDate%%">Date published: %%GLOBAL_ReviewDate%%</p>
+        <p itemprop="reviewBody">%%GLOBAL_ReviewText%%</p>
+        <p class="Meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            %%LNG_PostedBy%% <span itemprop="name">%%GLOBAL_ReviewName%%</span>
+        </p>
+    </li>

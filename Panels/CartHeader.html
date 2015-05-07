@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+%%GLOBAL_OptimizerLinkScript%%
+
+%%GLOBAL_CartCheckoutButtonControlScript%%
+<script>
+  var goBack = function () {
+    window.history.back();
+  };
+</script>
+<style>
+  #CartHeader {
+    position: relative;
+    height: 75px;
+  }
+  #cart-header-text {
+    display: none;
+    width: 250px;
+    height: 75px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 75px;
+    color: #525252;
+  }
+  @media screen and (min-width: 768px) {
+    #cart-header-text {
+      display: block;
+    }
+  }
+  #go-back-button,
+  #add-to-cart-top {
+    position: relative;
+    height: 45px;
+    padding: 0 14px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background: #666;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #go-back-button:hover,
+  #add-to-cart-top:hover {
+    opacity: .9
+  }
+  #add-to-cart-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #478B54;
+  }
+  table.General, table.CartContents, table.General {
+    margin: 0 0 25px;
+  }
+  table.CartContents thead tr th, table.General thead tr th {
+    background: #fafafa;
+    color: #555;
+  }
+</style>
+<div class="Block Moveable Panel" id="CartHeader">
+  <div class='FloatLeft'><button onclick='goBack()' id='go-back-button'>Go Back</button></div>
+  <div id='cart-header-text'>Your Cart</div>
+  <div class='FloatRight'><button onclick="location.href='%%GLOBAL_CheckoutLink%%';" id='add-to-cart-top'>Proceed to Checkout</button>
+    <!--
+    <span style="%%GLOBAL_HideCheckoutButton%%;" class="FloatRight">
+    <a href="%%GLOBAL_CheckoutLink%%" onclick="%%GLOBAL_OptimizerLinkFunction%%" title="%%LNG_CheckoutButtonTitle%%">
+    %%GLOBAL_CartCheckoutButtonOptimizerScriptTag%%
+    <img src="%%GLOBAL_IMG_PATH%%/%%GLOBAL_SiteColor%%/CheckoutButton.gif" alt="%%LNG_CheckoutButtonTitle%%" />
+    %%GLOBAL_CartCheckoutButtonOptimizerNoScriptTag%%</a>
+    GLOBAL_AdditionalCheckoutButtons </span>
+    LNG_YourShoppingCart
+  -->
+</div>
+%%Discount.FreeShippingEligibility%%

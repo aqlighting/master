@@ -1,0 +1,21 @@
+<div class='popup'>
+  <h2 class='popup-header'>%%GLOBAL_fastCartQuantityTxt%%</h2>
+  <hr>
+  <figure class='popup-image'>%%GLOBAL_fastCartProdImg%%</figure>
+  <div class='popup-content'>
+    <div class='popup-product-link'>%%GLOBAL_fastCartProdLink%%</div>
+    <div class='popup-price'>%%GLOBAL_fastCartProdTotal%%</div>
+    <div class='popup-quantity'>%%LNG_QuantityAdded%%: <strong>%%GLOBAL_fastCartQuantity%%</strong></div>
+    <a class='popup-keep-shopping' href='javascript:;' onclick="$('.modalClose').trigger('click')">Keep Shopping</a>
+  </div>
+  <hr>
+  <div class='popup-cart-contains'>
+    %%LNG_YourCartContains%% <strong>%%GLOBAL_fastCartNumItemsTxt%%</strong><br>
+    <span class='subtotal'>%%LNG_OrderSubtotal%%:</span>
+    <div class='popup-price'>%%GLOBAL_fastCartSubtotal%%</div>
+  </div>
+  <hr>
+  <a class='popup-view-cart' href="%%GLOBAL_ShopPath%%/cart.php">View Cart</a>
+  <a class='checkout' href='javascript:;' onclick="location.href='%%GLOBAL_CheckoutLink%%'">Checkout</a>
+  %%GLOBAL_AdditionalCheckoutButtons%%
+</div>

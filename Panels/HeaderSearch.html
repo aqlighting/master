@@ -1,0 +1,18 @@
+            <div id="SearchForm">
+                <form action="%%GLOBAL_ShopPath%%/search.php" method="get" onsubmit="return check_small_search_form()">
+                    <label for="search_query">%%LNG_Search%%</label>
+                    <input id="search_query" type="text" name="search_query" onblur="if($(this).val()) { $(this).data('custom', 1); return; } $(this).removeClass('QuickSearchFocused'); if(!$(this).val()) { $(this).val('What can I help you find?'); $(this).data('custom', 0); }" onfocus="$(this).addClass('QuickSearchFocused'); if(!$(this).data('custom')) { $(this).val(''); }" placeholder='What can I help you find?'>
+                    <!--<input type="image" src="https://www.affordablequalitylighting.com/templates/__custom/images/palegreen/Search.png" class="Button" />-->
+                    <input type='submit' value='Go' id='search-submit' />
+                </form>
+                <p>
+                   <!-- <a href="%%GLOBAL_ShopPathNormal%%/search.php?mode=advanced"><strong>%%LNG_AdvancedSearch%%</strong></a> |
+                    <a href="%%GLOBAL_ShopPathNormal%%/search.php?action=Tips">%%LNG_SearchTips%%</a> -->
+                </p>
+            </div>
+
+            <script type="text/javascript">
+                var QuickSearchAlignment = 'left';
+                var QuickSearchWidth = '650px';
+                lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+            </script>

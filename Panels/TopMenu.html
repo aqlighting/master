@@ -1,0 +1,67 @@
+%%GLOBAL_OptimizerLinkScript%%
+<section class='aql'>
+  <div class="header">
+    <div class="wrapper">
+      <div class="shipping-bar">
+        <div class="wrapper">
+          <div class="w-row">
+            <div class="w-col w-col-6 topbar-col-left">
+              <div class="w-hidden-small w-hidden-tiny p-topbar-caption">Need help from our experts?</div>
+              <a href='/' class="w-hidden-medium w-hidden-main">
+                <img class="aql-iso top" src="/template/images/v2/aql-iso.png" alt="AQL">
+              </a>
+              <div class="p-phone-number">1.800.865.7221</div>
+            </div>
+            <div class="w-col w-col-6 topbar-col-right">
+              <div class="p-free-shipping">Today, <strong>Free shipping</strong> over $150*</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-row">
+        <div class="w-col w-col-8 w-col-small-8 w-col-tiny-8 w-clearfix">
+          <a class="w-hidden-tiny w-hidden-small w-inline-block logo" href="/">
+            <img class="w-hidden-medium w-hidden-small w-hidden-tiny aql-logo" src="/template/images/v2/logo-white.png" alt="AQL Logo">
+            <img class="w-hidden-main aql-iso" src="/template/images/v2/aql-iso.png" alt="AQL">
+          </a>
+
+          <div class='w-form form-wrapper'>
+            <form action='%%GLOBAL_ShopPath%%/search.php' method='get' onsubmit='return check_small_search_form()' id='email-form-2' class='w-clearfix search-bar-wrapper small'>
+              <input id="search_query" class='w-input search-bar' type="text" name="search_query" onblur="if($(this).val()) { $(this).data('custom', 1); return; } $(this).removeClass('QuickSearchFocused'); if(!$(this).val()) { $(this).val('What are you looking for?'); $(this).data('custom', 0); }" onfocus="$(this).addClass('QuickSearchFocused'); if(!$(this).data('custom')) { $(this).val(''); }" placeholder='What are you looking for?'>
+              <input type='submit' value='' id='search-submit' class='search-icon' />
+            </form>
+          </div>
+        </div>
+
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+          <div class="w-clearfix full-menu">
+            <a class="w-inline-block user-icon cart" href="/cart.php">
+              <p id='numberOfItemsInCart' class="p-badge">%%GLOBAL_CartItems%%</p>
+            </a>
+            <a class="w-inline-block user-icon profile" href="#" data-ix="new-interaction"></a>
+            <div class="welcome w-hidden-tiny w-hidden-small">Hello <span class="name">%%GLOBAL_CurrentCustomerFirstName%%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <ul class="w-list-unstyled">
+          <li><a class="user-option" href="/account.php?action=inbox">Messages</a></li>
+          <li><a class="user-option" href="/account.php?action=recent_items">Recent Viewed</a></li>
+          <li><a class="user-option" href="/wishlist.php">Wish Lists</a></li>
+          <li><a class="user-option" href="/account.php?action=order_status">Order Status</a></li>
+          <li><a class="user-option" href="/account.php?action=address_book">Address Book</a></li>
+          <li><a class="user-option" href="/account.php?action=account_details">Account Details</a></li>
+          <li><a class="user-option" href="/login.php?action=logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type='text/javascript'>
+  var QuickSearchAlignment = 'left';
+  var QuickSearchWidth = '436px';
+  lang.EmptySmallSearch = '%%LNG_EmptySmallSearch%%';
+</script>
