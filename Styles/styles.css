@@ -1,5 +1,12 @@
 #ModalContainer {
-  border-radius: 3px;
+  top: 0 !important;
+  right: 0;
+  left: 0;
+  width: 100% !important;
+  max-width: 700px;
+  min-height: 410px;
+  margin: auto !important;
+  border-radius: 2px;
   box-shadow: 0 0 40px #333;
   overflow: hidden;
 }
