@@ -1130,6 +1130,10 @@
     position: static;
   }
 }
+
+.aql .fancy_inner {
+  overflow: hidden;
+}
 .aql .w-lightbox-backdrop {
   position: fixed;
   top: 0;
