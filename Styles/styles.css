@@ -8695,6 +8695,7 @@ input[type='checkbox'] {
   font-size: 15px;
   line-height: 26px;
 }
+
 .PostBody {
   width: 100%;
 }
@@ -8832,3 +8833,18 @@ input[type='checkbox'] {
   background-color: #655F5C;
   color: #ffffff;
 }
+=======
+.PostBody{
+  width:100%;}
+ .blog-imglft{
+	 position:relative;
+	 float:left;
+padding:5px;
+margin:auto;
+	 }
+.blog-imgrt{
+	position:relative;
+	float:right;
+margin:auto;
+padding:5px;
+	}
