@@ -121,6 +121,15 @@
     $('#main-menu').toggleClass('active')
   })
 
+  var productPrice = $('.ProductPrice');
+
+  if (productPrice.length) {
+    var intPrice = productPrice.text().replace("$", '');
+
+    if (intPrice >= 150)
+      productPrice.append('<span class="free-shipping-container">Qualifies for Free Shipping</span>')
+  }
+
   //Solid Brass Construction Text
   var solidBrassConstruction = 'Solid Brass Construction',
   b = 'Black',
