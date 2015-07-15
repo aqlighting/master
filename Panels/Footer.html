@@ -109,12 +109,10 @@
     })
   };
 
-  if (windowWidth >= 768)
-    menuHover()
+  if (windowWidth >= 768) menuHover()
 
   $(window).on('resize', function () {
-    if (windowWidth >= 768)
-      menuHover()
+    if (windowWidth >= 768) menuHover()
   })
 
   $('#hamburger').on('click', function () {
@@ -124,10 +122,20 @@
   var productPrice = $('.ProductPrice');
 
   if (productPrice.length) {
-    var intPrice = productPrice.text().replace("$", '');
+    var parsedPrice = productPrice.text().replace("$", '');
 
-    if (intPrice >= 150)
+    if (parsedPrice >= 150)
       productPrice.append('<span class="free-shipping-container">Qualifies for Free Shipping</span>')
+
+    $('.ProductAddToCart').on('change', function () {
+      setTimeout(function () {
+        parsedPrice = productPrice.text().replace("$", '')
+
+        if (parsedPrice >= 150)
+          productPrice.append('<span class="free-shipping-container">Qualifies for Free Shipping</span>')
+      }, 1000)
+    })
+
   }
 
   //Solid Brass Construction Text

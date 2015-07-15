@@ -6089,10 +6089,12 @@ a:hover {
 }
 .ProductPrice,
 .ProductList em {
+  border: none;
   color: #dd2020;
   font-size: 14px;
   font-weight: 700;
   font-style: normal;
+  pointer-events: none;
 }
 .ProductList .Rating {
   color: #6a6a6a;
