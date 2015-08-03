@@ -6094,7 +6094,6 @@ a:hover {
   font-size: 14px;
   font-weight: 700;
   font-style: normal;
-  pointer-events: none;
 }
 .ProductList .Rating {
   color: #6a6a6a;
@@ -8239,12 +8238,16 @@ ul.ShippingAddressList li,
 .center {
   float: left;
   position: relative;
-  width: 100%;
+  max_width: 100%;
   padding: 25px 0;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
 }
+.center-vid{
+	text-align:center;
+	margin:auto;
+	}
 .center img {
   display: block;
   margin-right: auto;
