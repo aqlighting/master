@@ -3127,6 +3127,10 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+.aql #top-menu-phone-number {
+  color: #fff;
+  text-decoration: none;
+}
 .aql .topbar-col-left {
   text-align: left;
 }
