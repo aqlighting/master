@@ -122,17 +122,20 @@
   var productPrice = $('.ProductPrice');
 
   if (productPrice.length) {
-    var parsedPrice = productPrice.text().replace("$", '');
+    var parsedPrice = productPrice.text().replace("$", ''),
+        quantityInput = $('.quantityInput').val(),
+        freeShipping = '<span class="free-shipping-container">Qualifies for Free Shipping</span>';
 
-    if (parsedPrice >= 150)
-      productPrice.append('<span class="free-shipping-container">Qualifies for Free Shipping</span>')
+    if (parsedPrice * quantityInput >= 150)
+      productPrice.append(freeShipping)
 
-    $('.ProductAddToCart').on('change', function () {
+    $('.ProductAddToCart, ' + quantityInput).on('change', function () {
       setTimeout(function () {
         parsedPrice = productPrice.text().replace("$", '')
+        quantityInput = $('.quantityInput').val()
 
-        if (parsedPrice >= 150)
-          productPrice.append('<span class="free-shipping-container">Qualifies for Free Shipping</span>')
+        if (parsedPrice * quantityInput >= 150)
+          productPrice.append(freeShipping)
       }, 1000)
     })
 
