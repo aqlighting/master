@@ -8953,3 +8953,22 @@ input[type='checkbox'] {
   border-right: 12px solid #2d7cfa;
   border-bottom: 12px solid rgba(0, 0, 0, 0);
 }
+.NPFinish img {
+  display: block;
+  max-width: 250px;
+  max-height: 250px;
+  margin: auto;
+}
+.aql ul.NPFinish {
+  list-style-type: none;
+  overflow: hidden;
+}
+.NPFinish li {
+  display: inline;
+  float: left;
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+}
