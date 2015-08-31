@@ -5277,23 +5277,24 @@ hr {
     color: #fff;
   }
   #main-menu > ul {
-    margin: 50px 0 0;
+    margin: 46px 0 0;
   }
   #main-menu ul {
     text-indent: 15px;
   }
   #main-menu li {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     list-style-type: none;
   }
-  .main-menu-cat > a,
-  .main-menu-sub-cat > a {
-    font-size: 18px;
-    font-weight: 400;
+  .main-menu-cat {
+    margin: 0;
   }
   .main-menu-cat a {
     display: block;
-    padding: 7px 0;
+    padding: 13px 0;
+    font-size: 18px;
+    font-weight: 400;
     text-decoration: none;
     text-transform: capitalize;
   }
@@ -5306,9 +5307,64 @@ hr {
     font-weight: 600;
   }
   .main-menu-cat h4 {
-    padding-left: 10px;
+    padding: 20px 10px 0;
+    color: rgba(255, 255, 255, .3);
+    font-size: 14px;
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .main-menu-cat > ul,
+  .main-menu-sub-cat-container {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #1E5CBE;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 610ms cubic-bezier(0,0.88,0.55,1);
+    -moz-transition: -webkit-transform 610ms cubic-bezier(0,0.88,0.55,1);
+    transition: -webkit-transform 610ms cubic-bezier(0,0.88,0.55,1);
+  }
+
+  .main-menu-cat > ul.active,
+  .main-menu-sub-cat-container.active {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  .main-menu-cat-bracket {
+    float: left;
+    width: 50px;
+    height: 51px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, .1);
+    color: rgba(255, 255, 255, .7);
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .main-menu-cat-back {
+    padding: 12px 110px;
+    background-color: rgba(0,0,0,.2);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .main-menu-sub-cat-container-column ul {
+    text-indent: 0 !important;
   }
 }
 @media screen and (min-width: 768px) {

@@ -107,6 +107,18 @@
       var listHeight = $(this).parent().height();
       $(this).children('.main-menu-sub-cat-container').height(listHeight - 1)
     })
+  } else {
+    $('.main-menu-cat').prepend('<div class="main-menu-cat-bracket"><</div>')
+    $('.main-menu-sub-cat-container').parent().prepend('<div class="main-menu-cat-bracket"><</div>')
+    $('.main-menu-cat > ul, .main-menu-sub-cat-container').prepend('<div class="main-menu-cat-back">Back</div>')
+
+    $('.main-menu-cat-bracket').on('click', function () {
+      $(this).parent().children('ul').addClass('active')
+      $(this).parent().children('.main-menu-sub-cat-container').addClass('active')
+    })
+    $('.main-menu-cat-back').on('click', function () {
+      $(this).parent().removeClass('active')
+    })
   }
 
   $('#hamburger').on('click', function () {
