@@ -90,7 +90,7 @@
   // Menu
   var windowWidth = $(window).width();
 
-  var menuHover = function () {
+  if (windowWidth >= 768) {
     $('.main-menu-cat').on('mouseenter',function () {
       $(this).children('.main-menu-cat-vertical').show();
       $(this).children('.main-menu-cat-vertical-left').show();
@@ -107,13 +107,7 @@
       var listHeight = $(this).parent().height();
       $(this).children('.main-menu-sub-cat-container').height(listHeight - 1)
     })
-  };
-
-  if (windowWidth >= 768) menuHover()
-
-    $(window).on('resize', function () {
-      if (windowWidth >= 768) menuHover()
-    })
+  }
 
   $('#hamburger').on('click', function () {
     $('#main-menu').toggleClass('active')
