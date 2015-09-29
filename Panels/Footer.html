@@ -132,7 +132,7 @@
         quantityInput = $('.quantityInput').val(),
         freeShipping = '<span class="free-shipping-container">Qualifies for Free Shipping</span>';
 
-    if (parsedPrice * quantityInput >= 150)
+    if (parsedPrice * quantityInput >= 199)
       productPrice.append(freeShipping)
 
     $('.ProductAddToCart, ' + quantityInput).on('change', function () {
@@ -140,7 +140,7 @@
         parsedPrice = productPrice.text().replace("$", '')
         quantityInput = $('.quantityInput').val()
 
-        if (parsedPrice * quantityInput >= 150)
+        if (parsedPrice * quantityInput >= 199)
           productPrice.append(freeShipping)
       }, 1000)
     })
