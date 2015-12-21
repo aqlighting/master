@@ -1925,25 +1925,26 @@
   text-decoration: underline;
 }
 .aql .social-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   background-image: url('https://cdn5.bigcommerce.com/shared/css/img/sprite-social.png');
   background-repeat: no-repeat;
-  background-size: 150px;
 }
 .aql .social-icon.twitter {
-  background-position: 25% 0;
+  background-position: 0 -120px;
 }
 .aql .social-icon.google {
-  background-position: 50% 0;
+  background-position: 0 -40px;
 }
 .aql .social-icon.linkedin {
-  background-position: 75% 0;
+  background-position: 0 -280px;
 }
 .aql .social-icon.pinterest {
-  background-position: 100% 0;
+  background-position: 0 -160px;
 }
 .aql .list-category {
   display: block;
@@ -3948,8 +3949,10 @@
   margin-bottom: 10px;
 }
 .aql .social {
-  float: right;
-  margin-top: -7px;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 35px;
 }
 .aql .aql-logo {
   width: 200px;
