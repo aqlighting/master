@@ -119,15 +119,17 @@
     $('#main-menu').toggleClass('active')
   })
 
-  var productPrice = $('.ProductPrice');
+  var productPrice = $('.ProductPrice'),
+      brandName = $('.brand-name').text().toLowerCase();
 
-  if (productPrice.length) {
+  if (productPrice.length && brandName !== 'spod' && brandName !== 'maximus-3' && brandName !== 'warrior products') {
     var parsedPrice = productPrice.text().replace("$", ''),
         quantityInput = $('.quantityInput').val(),
         freeShipping = '<span class="free-shipping-container">Qualifies for Free Shipping</span>';
 
-    if (parsedPrice * quantityInput >= 199)
-      productPrice.append(freeShipping)
+    $('#free-shipping-under-button').show()
+
+    if (parsedPrice * quantityInput >= 199) productPrice.append(freeShipping)
 
     $('.ProductAddToCart, ' + quantityInput).on('change', function () {
       setTimeout(function () {
