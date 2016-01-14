@@ -3949,6 +3949,7 @@
   margin-bottom: 10px;
 }
 .aql .social {
+  display: none;
   position: absolute;
   top: 70px;
   right: 10px;
@@ -8113,8 +8114,8 @@ select option,
   #shipping-details {
     float: left;
     width: 385px;
-    height: 230px;
     padding-left: 30px;
+    margin-bottom: 20px;
     border-left: 1px solid #cccccc;
   }
 }
@@ -8133,7 +8134,7 @@ select option,
 .FloatRight.CheckoutRedeemCoupon {
   float: left;
   position: relative;
-  top: -175px;
+  top: -200px;
   left: 2px;
   padding: 17px;
 }
