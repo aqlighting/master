@@ -6710,7 +6710,7 @@ table.General tbody tr td {
   text-align: right;
 }
 .Field45 {
-  width: 45px;
+  width: 50px !important;
 }
 .Field100 {
   width: 100px;
@@ -8077,6 +8077,12 @@ select option,
 .ExpressCheckoutContent {
   width: 100%;
 }
+.ExpressCheckoutContent {
+  position: relative;
+}
+.ExpressCheckout .full-banner {
+  display: none;
+}
 .EstimateShipping .shippingquote {
   float: right;
 }
@@ -8131,12 +8137,10 @@ select option,
   position: relative;
   height: 200px;
 }
-.FloatRight.CheckoutRedeemCoupon {
-  float: left;
-  position: relative;
-  top: -200px;
-  left: 2px;
-  padding: 17px;
+.CheckoutRedeemCoupon {
+  position: absolute;
+  padding: 18px;
+  margin-top: -177px;
 }
 .CheckoutOrderComments {
   width: 93%;
@@ -8213,15 +8217,12 @@ select option,
     right: 643px;
   }
   #provider_list h2 {
-    position: absolute;
-    width: 100%;
-    height: 25px;
-    border-top: 1px dashed #a3a3a3;
-    background: #ffffff;
+    padding: 0;
+    margin: 16px 0;
     color: #3283eb;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 30px;
-    text-align: center;
+    text-transform: capitalize;
   }
 }
 #bottom_payment_button {
