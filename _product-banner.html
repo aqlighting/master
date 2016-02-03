@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang='en'>
+%%Panel.HTMLHead%%
+<body>
+  <script src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/validate/jquery.validate.js?%%GLOBAL_JSCacheToken%%"></script> 
+  <script src="%%GLOBAL_CdnAppPath%%/javascript/product.functions.js?%%GLOBAL_JSCacheToken%%"></script> 
+  <script src="%%GLOBAL_CdnAppPath%%/javascript/product.js?%%GLOBAL_JSCacheToken%%"></script>
+
+  <div id="Container">
+    %%Panel.Header%%
+    <section class="aql">
+      <div class="wrapper">
+        <div class="box-bg">
+          %%Panel.WrapperBanner%%
+          %%Panel.ProductBreadcrumb%%
+          <!--Insert Banner Here-->
+          %%Panel.ProductDetails%%
+          %%Panel.ProductTabs%%
+          %%Panel.ProductDescription%%
+          %%Panel.ProductVideos%%
+          %%Panel.ProductWarranty%%
+          %%Panel.ProductOtherDetails%%
+          %%Panel.SimilarProductsByTag%%
+          %%Panel.ProductByCategory%%  
+          %%Panel.ProductVendorsOtherProducts%%
+          %%Panel.ProductReviews%%
+          %%Panel.SimilarProductsByCustomerViews%%
+        </div>
+      </div>
+    </section>
+    %%Panel.Footer%%
+  </div>
+  <script>
+    $(function () {
+      var tabContainers = $('div.tabs > div');
+      tabContainers.hide().filter(':first').show();
+      $('div.tabs ul.tabNavigation a').click(function () {
+        tabContainers.hide();
+        tabContainers.filter(this.hash).show();
+        $('div.tabs ul.tabNavigation a').removeClass('selected');
+        $(this).addClass('selected');
+        return false;
+      }).filter(':first').click();
+    });
+  </script>
+</body>
+</html>​
