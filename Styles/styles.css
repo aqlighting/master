@@ -1,17 +1,6 @@
-#ModalContainer {
-  right: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  max-width: 700px !important;
-  margin: auto !important;
-  border-radius: 2px !important;
-  box-shadow: 0 0 40px #333333 !important;
-  overflow: hidden !important;
-}
 .olrk-noquirks {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .olrk-noquirks {
     display: block;
@@ -3418,6 +3407,19 @@
   padding: 0;
   border: none;
 }
+
+#ModalContainer {
+  top: 2% !important;
+  right: 2% !important;
+  left: 2% !important;
+  width: 96% !important;
+  max-width: 700px !important;
+  height: auto !important;
+  max-height: 96% !important;
+  margin: auto !important;
+  border-radius: 2px !important;
+}
+
 .popup {
   position: relative;
   max-width: 720px;
@@ -3517,7 +3519,7 @@
 .popup .checkout {
   float: right;
   padding: 8px 35px;
-  margin: 0 10px;
+  margin: 0 6px;
   border-bottom: 2px solid #1c50a4;
   border-radius: 3px;
   background-color: #2d7cfa;
@@ -3529,6 +3531,10 @@
 }
 .checkout:hover {
   opacity: 1;
+}
+.PayPalExpressCheckout {
+  margin: 20px auto;
+  width: 100%;
 }
 .popup .PayPalExpressCheckout {
   clear: none !important;
@@ -6294,20 +6300,16 @@ table.General thead tr th {
   color: #262e27;
   text-align: center;
 }
+
 .CheckoutRedeemCoupon {
-  display: none;
+  display: block;
+  width: 258px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eeeeee;
+  background: #f2f2f2;
 }
 
-@media screen and (min-width: 1024px) {
-  .CheckoutRedeemCoupon {
-    display: block;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #eeeeee;
-    background: #f2f2f2;
-  }
-}
 .SpecificInfoMessage {
   background-color: #f8e4d1;
   color: #555555;
@@ -6538,7 +6540,7 @@ table.General tbody tr td {
   margin: 0 200px 0 20px;
 }
 .Content.Widest {
-  margin: 0 20px;
+  margin: 0;
 }
 #ImageScrollPrev,
 #ImageScrollNext {
@@ -7007,6 +7009,7 @@ table.CartContents tbody td {
 }
 .ShippingProviderList {
   list-style: none;
+  margin: 0;
 }
 .GoogleCheckout p,
 .PayPalExpressCheckout p,
@@ -7568,7 +7571,10 @@ div.tabs > div {
 .shippingButton,
 #CheckoutStepShippingProvider input[type=submit],
 #bottom_payment_button,
-#CheckoutStepPaymentDetails input[type=submit] {
+#CheckoutStepPaymentDetails input[type=submit],
+#CheckoutGuestForm .Submit input[type=submit],
+#AddressEditForm input[type=submit],
+#ChooseShippingProvider input[type=submit] {
   width: 95%;
   padding: 10px 40px !important;
   border: 1px solid #3079ed;
@@ -7597,9 +7603,15 @@ div.tabs > div {
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#327CFD, endColorstr=#1D69E9, GradientType=1);
 }
+
+#bottom_payment_button {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .CreateAccount,
 .AccountLogin {
   float: left;
@@ -7812,6 +7824,7 @@ div.tabs > div {
   border-right: 0;
 }
 .Content h2 {
+  height: auto !important;
   padding: 5px 0 10px;
   margin: 0;
   font-family: arial, sans-serif;
@@ -8102,11 +8115,11 @@ select option,
 }
 .ShippingProviderList li {
   position: relative;
-  height: 30px;
+  min-height: 35px;
   padding: 3px 10px;
   border-radius: 3px;
   background-color: #f0f0f0;
-  line-height: 30px;
+  line-height: 35px;
 }
 .ShippingProviderList li:hover {
   background-color: #e0e0e0;
@@ -8128,6 +8141,7 @@ select option,
 #shipping-details h2 {
   color: blue;
 }
+
 #shipping-details p {
   padding: 20px;
   margin: 0;
@@ -8135,13 +8149,18 @@ select option,
 }
 #provider_list {
   position: relative;
-  height: 200px;
+  min-height: 200px;
 }
-.CheckoutRedeemCoupon {
-  position: absolute;
-  padding: 18px;
-  margin-top: -177px;
+
+#ConfirmOrder h3 {
+  color: #333;
 }
+
+#ConfirmOrder .FloatRight {
+  float: none;
+  text-align: center;
+}
+
 .CheckoutOrderComments {
   width: 93%;
   padding: 10px;
@@ -8154,80 +8173,85 @@ select option,
   text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
-  #checkout_provider_checkout_authorizenet,
-  #checkout_provider_checkout_cod,
-  #checkout_provider_checkout_paypal {
-    display: block;
-    z-index: 50;
-    position: absolute;
-    top: 47px;
-    right: 278px;
-  }
-  #checkout_provider_checkout_cod {
-    right: 600px;
-  }
-  #checkout_provider_checkout_paypal {
-    right: 920px;
-  }
+#checkout_provider_checkout_authorizenet,
+#checkout_provider_checkout_cod,
+#checkout_provider_checkout_paypalexpress {
+  display: none;
+}
+
+.ProviderNamecheckout_authorizenet,
+.ProviderNamecheckout_cod,
+.ProviderNamecheckout_paypalexpress {
+  display: inline-block;
+  width: 285px;
+  height: 145px;
+  padding: 5px 5px;
+  margin: 10px -10px;
+  border: 2px solid #a3a3a3;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #dddddd;
+  background: transparent url('https://www.affordablequalitylighting.com/product_images/uploaded_images/checkout-payment-methods.png') no-repeat 0 -2px;
+  color: transparent;
+}
+
+@media all and (min-width: 1024px) {
   .ProviderNamecheckout_authorizenet,
   .ProviderNamecheckout_cod,
-  .ProviderNamecheckout_paypal {
-    display: inline-block;
+  .ProviderNamecheckout_paypalexpress {
     position: absolute;
     top: 41px;
     right: 0;
-    width: 285px;
-    height: 145px;
-    padding: 5px 5px;
-    border: 1px dashed #a3a3a3;
-    box-shadow: 2px 2px 10px #dddddd;
-    background: transparent url('https://www.affordablequalitylighting.com/product_images/uploaded_images/checkout-payment-methods.png') no-repeat 0 -2px;
-    color: transparent;
+    margin: 0;
   }
+
   .ProviderNamecheckout_cod {
-    background-position: -300px -2px;
+    right: 323px;
   }
-  .ProviderNamecheckout_paypal {
-    background-position: -600px -2px;
+
+  .ProviderNamecheckout_paypalexpress {
+    right: 643px;
   }
-  .ProviderNamecheckout_authorizenet.checkout-provider-checked {
-    border: 1px solid #3283eb;
-    background-position: 0 -158px;
-  }
-  .ProviderNamecheckout_cod.checkout-provider-checked {
-    border: 1px solid #3283eb;
-    background-position: -300px -158px;
-  }
-  .ProviderNamecheckout_paypal.checkout-provider-checked {
-    border: 1px solid #3283eb;
-    background-position: -600px -160px;
-  }
+
   .ProviderNamecheckout_authorizenet:hover,
-  .ProviderNamecheckout_paypal:hover,
+  .ProviderNamecheckout_paypalexpress:hover,
   .ProviderNamecheckout_cod:hover {
     border-color: #3283eb;
     cursor: pointer;
     opacity: .9;
   }
-  .ProviderNamecheckout_cod {
-    right: 323px;
-  }
-  .ProviderNamecheckout_paypal {
-    right: 643px;
-  }
-  #provider_list h2 {
-    padding: 0;
-    margin: 16px 0;
-    color: #3283eb;
-    font-size: 24px;
-    line-height: 30px;
-    text-transform: capitalize;
-  }
 }
-#bottom_payment_button {
-  margin: 20px auto;
+
+#checkout_provider_checkout_authorizenet:checked + .ProviderNamecheckout_authorizenet,
+#checkout_provider_checkout_cod:checked + .ProviderNamecheckout_cod,
+#checkout_provider_checkout_paypalexpress:checked + .ProviderNamecheckout_paypalexpress {
+  border-color: #3283eb;
 }
+
+#checkout_provider_checkout_authorizenet:checked + .ProviderNamecheckout_authorizenet {
+  background-position: 0 -158px;
+}
+
+.ProviderNamecheckout_cod {
+  background-position: -300px -2px;
+}#checkout_provider_checkout_cod:checked + .ProviderNamecheckout_cod {
+  background-position: -300px -158px;
+}
+
+.ProviderNamecheckout_paypalexpress {
+  background-position: -600px -2px;
+}#checkout_provider_checkout_paypalexpress:checked + .ProviderNamecheckout_paypalexpress {
+  background-position: -600px -158px;
+}
+
+#provider_list h2 {
+  padding: 0;
+  margin: 16px 0;
+  color: #3283eb;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
 table.General tbody tr.First td,
 .CartContents .CartProductFieldsRow {
   border-top: 0;
@@ -9056,4 +9080,35 @@ input[type='checkbox'] {
 
 .AddBillingAddress > img {
   display: none;
+}
+
+.product--banner {
+  min-height: 100px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  padding: 10px 0 20px;
+  margin: 20px;
+  background: #f8f8f8;
+  color: #2d7cfa;
+  font-size: 26px;
+  text-align: center;
+}
+  .product--banner--input {
+    position: relative;
+    top: 4px;
+    max-width: 200px;
+    padding: 5px;
+    margin-left: 15px;
+    border: none;
+    background: #333333;
+    color: #ffffff;
+    font-size: 34px;
+    text-align: center;
+  }
+
+@media all and (min-width: 1024px) {
+  .product--banner {
+    padding: 0;
+    line-height: 97px;
+  }
 }

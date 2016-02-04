@@ -126,7 +126,7 @@
         %%GLOBAL_ExpressCheckoutLoadPaymentForm%%
         lang.TickArgeeTermsAndConditions = '%%LNG_TickArgeeTermsAndConditions%%';
         
-        $(function(){
+        $(function() {
             $('#provider_list input[type=radio], #credit_provider_list input[type=radio]').click(function() {
                 if(!$(this).hasClass('ProviderHasPaymentForm')) ExpressCheckout.HidePaymentForm();
                 else $('#CheckoutStepPaymentDetails').show();
