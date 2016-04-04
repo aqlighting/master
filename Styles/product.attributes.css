@@ -159,7 +159,6 @@
 
 /* vertical positioning of product image pick list elements */
 .productOptionViewProductPickListWithImage td {
-  vertical-align: top;
   padding: 3px;
 }
 

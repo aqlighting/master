@@ -7945,7 +7945,7 @@ html.javascript .productOptionViewRectangle .selectedValue label {
   border-width: 1px!important;
   border-color: #007c23!important;
 }
-.productOptionViewProductPickListWithImage .selectedValue td {
+.productOptionViewProductPickListWithImage .selectedValue td:last-child {
   background-color: #e7e7e7 !important;
 }
 .Label.QuantityInput {
