@@ -140,6 +140,8 @@
 .productOptionViewProductPickListWithImage {
   border: solid 1px #999; /* template colour if necessary */
   border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 /* max-height and scrolling behaviour of product image pick list */
