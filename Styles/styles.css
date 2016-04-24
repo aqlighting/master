@@ -2710,6 +2710,7 @@
 .aql .tab-bullet.col.first-child {
   border-top: 1px solid #d3dceb;
 }
+
 .aql .list-specifications {
   padding-left: 20px;
   color: #5c6778;
@@ -8427,6 +8428,40 @@ td.paddedright {
 .spectable {
   border-collapse: collapse;
 }
+
+@media screen and (max-width: 768px) {
+  #Overview iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .aql #Specs table td {
+    float: left;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 !important;
+    text-align: center;
+    word-spacing: nowrap;
+  }
+  .aql #Specs table td:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .aql #Specs table td:last-child {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .ProductThumbImage,
+  .ProductThumbImage a,
+  .ProductThumbImage img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
 .spectable td {
   min-width: 180px;
   padding-top: 2px;
@@ -8746,12 +8781,12 @@ input[type='checkbox'] {
   background-color: #b3dfff;
 }
 .lrgimg {
-  max-width: 940px;
+  max-width: 100%;
   height: auto;
 }
 .nptable-finish,
 .nptable-glass {
-  max-width: 940px;
+  max-width: 100%;
   padding: 5px 40px;
   font-weight: bold;
   text-align: center;
