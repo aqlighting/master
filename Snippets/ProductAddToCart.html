@@ -1,5 +1,5 @@
 %%GLOBAL_AddToCartButtonControlScript%%
-<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm" style="%%GLOBAL_HideProductAttributeList%%">
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
   <input type="hidden" name="action" value="add" />
   <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
   <input type="hidden" name="variation_id" class="CartVariationId" value="" />
