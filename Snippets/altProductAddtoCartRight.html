@@ -1,5 +1,5 @@
 %%GLOBAL_AddToCartButtonControlScript%%
-<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm" style="%%GLOBAL_HideProductAttributeList%%">
     <input type="hidden" name="action" value="add" />
     <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
     <input type="hidden" name="variation_id" class="CartVariationId" value="" />
@@ -9,7 +9,7 @@
         <div class="ProductOptionList">
             %%SNIPPET_VariationList%%
         </div>
-        <div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">%%GLOBAL_ProductAttributeList%%</div>
+        <div class="productAttributeList">%%GLOBAL_ProductAttributeList%%</div>
         %%SNIPPET_EventDate%%
         <div class="DetailRow" style="display: %%GLOBAL_DisplayAdd%%">
             <div class="Label QuantityInput" style="display: %%GLOBAL_DisplayAddQty%%">%%LNG_QuantityFull%%:</div>
