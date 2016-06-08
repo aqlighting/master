@@ -52,7 +52,7 @@
   var isOutOfStock = '%%GLOBAL_HideProductAttributeList%%';
 
   if (isOutOfStock.length) {
-    $.getJSON('%%GLOBAL_CdnStorePath%%/templates/__custom/alt-products.json?version=1.1', function(data) {
+    $.getJSON('%%GLOBAL_CdnStorePath%%/templates/__custom/alt-products.json?version=1.1.1', function(data) {
       $.each(data, function(key, val) {
         if (val.sku === '%%GLOBAL_SKU%%') {
           $('.alt-container').fadeIn('slow');
