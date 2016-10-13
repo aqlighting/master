@@ -137,7 +137,7 @@
   $('#hamburger').on('click', function () {
     $('#main-menu').toggleClass('active')
   })
-
+  
   var productPrice = $('.ProductPrice'),
       brandName = $('.brand-name').text().toLowerCase();
 
@@ -148,14 +148,14 @@
 
     $('#free-shipping-under-button').show()
 
-    if (parsedPrice * quantityInput >= 199) productPrice.append(freeShipping)
+    if (parsedPrice * quantityInput >= 249) productPrice.append(freeShipping)
 
     $('.ProductAddToCart, ' + quantityInput).on('change', function () {
       setTimeout(function () {
         parsedPrice = productPrice.text().replace("$", '')
         quantityInput = $('.quantityInput').val()
 
-        if (parsedPrice * quantityInput >= 199)
+        if (parsedPrice * quantityInput >= 249)
           productPrice.append(freeShipping)
       }, 1000)
     })
